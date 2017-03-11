@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src='../lib/jquery/jquery.min.js'></script>
+    <script>
+        (function(){
+            $.fn.pageData = function () {
+            var o = {};
+            var urlString = window.location.search.slice(1);
+            var urlArray = urlString.split("&");
+            for (var i = 0; i < urlArray.length; i++) {
+                var urlItem = urlArray[i];
+                var item = urlItem.split("=");
+                o[item[0]] = item[1];
+            }
+            return o;
+            };
+        })();
+
+    </script>
+</body>
+
+</html>

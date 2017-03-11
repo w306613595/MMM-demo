@@ -1,0 +1,97 @@
+@color: #FF841D;
+a {
+  color: #333;
+}
+
+p.hide {
+  display: none;
+}
+
+.bornone {
+  border: none !important;
+}
+
+/*加载动画*/
+@keyframes show {
+  50% {
+    opacity: .5;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+
+}
+
+.animate {
+  margin-top: 37%;
+  margin-bottom: 37%;
+  text-align: center;
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff841d;
+    transform-origin: right center;
+  }
+  span:nth-child(1) {
+    animation: show .8s infinite;
+  }
+  span:nth-child(2) {
+
+    animation: show .7s .3s infinite;
+  }
+  span:nth-child(3) {
+    animation: show .6s .7s infinite;
+  }
+  span:nth-child(4) {
+
+    animation: show .5s 1.2s infinite;
+  }
+}
+
+.brief {
+  padding: 5px;
+  margin-bottom: 8px;
+  > .briefin {
+    border-radius: 4px;
+    background: #ebebeb;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ccc;
+    > .wzg-every {
+      > a {
+        display: block;
+        padding-left: 16px;
+        height: 40px;
+        border-bottom: 1px solid #ccc;
+        background: url("../images/arrow1.gif") right center no-repeat;
+        font: bold 16px/40px "黑体";
+        color: #000;
+      }
+      > .row {
+        display: none;
+        background: #f9f9f9;
+        margin: 0;
+        > div {
+          padding: 0;
+          height: 40px;
+          border-bottom: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          > a {
+            display: block;
+            line-height: 40px;
+            text-align: center;
+          }
+        }
+        div:nth-child(3n) {
+          border-right: none;
+        }
+      }
+
+    }
+
+  }
+}

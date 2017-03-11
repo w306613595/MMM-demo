@@ -1,0 +1,18 @@
+	1、注意点：每个人引入的其他的js及css须引入项目中；
+
+	2、注意点：没有search部分的页面，在common.js中不能执行，会报错；
+
+	3、报错：header和footer部分rem布局。		解决：须在common.js中持续监听；
+
+	4、样式错乱：header部分不使用公共样式时，common.less引用样式覆盖问题。		解决：整合进入单页less文件中。
+
+	5、注意点：文件命名应严格使用主页API中的a标签href属性值进行设置。
+
+	6、方法丢失问题：在common.js中设置的方法因为在闭包中，在下面不能引用。		解决：设置为$的方法。
+
+	7、样式问题：如果绝对（固定）定位后，没有进行top 等的设置，位置不发生改变。
+	
+	8、压缩注意点：
+		1、用gulp对less处理为css后，就不用再使用less.js进行解析；
+		2、less用css替换之后，注意 stylesheet/less  要去掉/less，   而不是替换为stylesheet/css；
+		3、压缩html之前先对内部html的引用测试之后再进行；（最后压缩html）

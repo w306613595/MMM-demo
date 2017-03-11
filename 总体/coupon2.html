@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>肯德基等优惠券--慢慢买</title>
+    <!--<link rel="" href=""/>-->
+    <!-- 引入第三方样式-->
+    <link rel="icon" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- 加载less样式文件 -->
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="css/coupon2.less">
+    <!-- 加载less.js文件 -->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!--优惠券头部-->
+<div class="ym-header clearfix">
+    <div class="header-lift"><a href="./coupon.html" class="glyphicon glyphicon-menu-left"></a></div>
+    <div class="header-right"><a href="#"></a></div>
+    <h1 id="min"></h1>
+</div>
+<div class="tishi" style="font-size:12px; text-align:center; color:#999; margin:8px 0px;">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+<div class="ym-kdyhj">
+    <ul id="ym-kd2">
+
+    </ul>
+</div>
+<div class="ym-yuhui">
+    <p>首页&gt;优惠券&gt;肯德基优惠券</p>
+</div>
+<!-- 登录注册-->
+<div class="ym-regis">
+    <div class="foot_top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;" style="width: 40%">返回顶部</a>
+    </div>
+</div>
+<div class="ym-footer">
+    <p><a href="#" class="loadup">手机APP下载</a><span class="mmobile"> 慢慢买手机版 </span> --掌上比价平台</p>
+    <p>m.manmanbuy.com</p>
+</div>
+<!--遮罩-->
+
+<div class="ym-shaowBox">
+    <div id="lorBox" class="lorBox">
+
+        <div class="neiBox">
+            <ul id="ym-shade" class="clearfix">
+
+            </ul>
+            <span class="post-l glyphicon glyphicon-menu-left" id="post-l"></span>
+            <span class="post-r glyphicon glyphicon-menu-right" id="post-r"></span>
+        </div>
+    </div>
+</div>
+<script type="text/template" id="infotpl">
+<% for(var i=0;i< result.length;i++){%>
+     <li class="clearfix">
+            <a href="javascript:;" class="clearfix">
+                <div class="kd-img"><%=#result[i].couponProductImg%></div>
+                <div class="kd-info">
+                    <div class="kd-center">
+                        <h3><%=result[i].couponProductName%></h3>
+                        <h2><%=result[i].couponProductPrice%></h2>
+                    </div>
+                    <div class="date"><%=result[i].couponProductTime%></div>
+                </div>
+            </a>
+            <i class="glyphicon glyphicon-menu-right"></i>
+        </li>
+    <%}%>
+</script>
+<script type="text/template" id="shadetpl">
+    <% for(var i=0;i< result.length;i++){%>
+        <p><%=result[i].couponTitle%>优惠券</p>
+    <%}%>
+</script>
+<script type="text/template" id="col-Box">
+    <% for(var i=0;i< result.length;i++){%>
+    <li>
+        <%=#result[i].couponProductImg%>
+    </li>
+    <%}%>
+</script>
+</body>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template/template-native.js"></script>
+<script src="js/coupon2.js"></script>
+</html>

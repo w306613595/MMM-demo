@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+/*reset*/
+
+h1,h2,h3,h4,h5,p,ul,ol,li {
+    padding:0;
+    margin:0;
+}
+
+
+/*header部分*/
+
+
+
+/*footer部分*/
+footer {
+    margin:10px 0;
+    background:white;
+    .footer_header {
+        display:flex;
+        >a {
+            flex:1;
+            height:.3rem;
+            line-height:.3rem;
+            text-align:center;
+            font-size:.14rem;
+            border:1px solid #ccc;
+            img {
+                width:.16rem;
+            }
+        }
+    }
+    >p {
+        padding:0;
+        text-align:center;
+        height:30px;
+        line-height:20px;
+        font-size:.12rem;
+        padding-top:5px;
+        a:first-child {
+            color:#FF0000;
+        }
+    }
+    >p:first-of-type {
+        margin-top:5px;
+        + p {
+            margin-top:-10px;
+        }
+    }
+}
+
+

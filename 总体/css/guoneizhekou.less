@@ -1,0 +1,139 @@
+/*头部区域*/
+
+
+body {
+  min-width: 320px;
+  background: #ffffff;
+}
+
+#header-zhangfei {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  padding: 10px;
+  background: #ff6c00;
+  .logo {
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    left: 10px;
+    top: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: consola;
+  }
+  h4 {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    line-height: 30px;
+  }
+  .app {
+    img {
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+/*国内商品区*/
+
+#menu {
+  >.container {
+     a {
+        background-color: white;
+        border: 1px solid #dddddd;
+        padding: 10px 5px 10px 10px;
+        img {
+          height: 140px;
+          display: block;
+          margin: 0 auto;
+        }
+        .title {
+          padding-left: 5px;
+          height: 36px;
+          font: 600 14px/18px "simsun";
+          color: #333;
+          overflow: hidden;
+        }
+        .price {
+          padding-left: 5px;
+          padding-right: 5px;
+          margin-top: 5px;
+          color: #ff6c00;
+          font: 500 14px/18px "simsun";
+          height: 18px;
+          overflow: hidden;
+        }
+        .info {
+          padding: 5px;
+          color: #a1a1a1;
+          font-size: 12px;
+          line-height: 24px;
+        }
+    }
+  }
+}
+
+.catalogue {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #dddddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 13px;
+  line-height: 36px;
+  background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+
+  
+}
+
+
+
+
+
+/*footer部分*/
+footer {
+  margin:10px 0;
+  background:white;
+  .footer_header {
+    display:flex;
+    >a {
+      flex:1;
+      line-height: 30px;;
+      text-align:center;
+      font-size: 14px;;
+      border:1px solid #ccc;
+      img {
+        width:.16rem;
+      }
+    }
+  }
+  >p {
+    padding:0;
+    text-align:center;
+    height:30px;
+    line-height:20px;
+    font-size: 12px;;
+    padding-top:5px;
+    a:first-child {
+      color:#FF0000;
+    }
+  }
+  >p:first-of-type {
+    margin-top:5px;
+    + p {
+      margin-top:-10px;
+    }
+  }
+}
+
+

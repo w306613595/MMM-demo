@@ -1,0 +1,425 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+};
+
+
+.hidden {
+    display: none;
+}
+.show{
+    display: inline-block;
+}
+
+// 字体
+@redCor:#ff841d;
+.wbb-header {
+    background-color: @redCor;
+    height: 44px;
+    width: 100%;
+    color: white;
+    position: relative;
+    .wbb-back {
+        width: 50px;
+        position: relative;
+        a{
+            position:relative;
+            display:inline-block;
+            
+            width: 50px;
+            height: 44px;
+           
+            .back_icon{
+                position:absolute;
+                display:inline-block;
+                margin: 5px;
+                 background:  url(../images/icon_back.png) no-repeat 0px 0px;
+                 width: 32px;
+                 height: 32px;
+            }
+        }
+    }
+    ;
+    .wbb-app {
+        width: 50px;
+        position: relative;
+        a{
+            position:absolute;
+            width: 50px;
+            height: 44px;
+  img{
+            height: 32px;
+            width: 32px;
+            position:absolute;
+            top:5px;
+            right:5px;
+        }
+        }
+      
+    }
+    ;
+    >h1 {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 20px;
+        line-height: 44px;
+        font-weight: 800;
+        padding: 0 50px;
+    }
+    ;
+}
+
+;
+//导航头部
+.wbb-heard-cat {
+    width: 100%;
+    height: 38px;
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    .wbb-nav {
+        display: inline-block;
+        width: 100%;
+        .wbb-nav-list {
+            margin: 0;
+            width: 756px;
+
+            display: inline-block;
+            li {
+                float: left;
+                a {
+                    margin: 0 10px;
+                    color: #333333;
+                    display: inline-block;
+                    line-height: 36px;
+                }
+                .noww {
+                    border-bottom: 1px solid @redCor;
+                    color: @redCor;
+                }
+            }
+        }
+    }
+    .wbb-search {
+
+        padding: 0 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-left: 1px solid #e6e6e6;
+        background-color: #fbfbfb;
+        line-height: 38px;
+       
+    }
+}
+.click {
+           color:#e4393c;
+        }
+
+;
+// 搜索框
+.wbb-from {
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+    padding: 10px 45px 10px 0;
+    border: 1px solid #e6e6e6;
+    .wbb-form-text {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        >input {
+            width: 100%;
+            padding: 0 26px;
+            font-size: 14px;
+            height: 35px;
+            border-width: 0;
+            border: 1px solid #eeeeee;
+            background-color: #FFFFFF;
+        }
+    }
+    .wbb-form-sub {
+        display: inline-block;
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        top: 10px;
+        right: 0;
+  
+        >input {
+            vertical-align: middle;
+            // cursor: pointer;
+            border-width: 0;
+            width: 30px;
+            height: 35px;
+            font-size: 14px;
+            text-align: center;
+            font-size: 15px;
+            text-rendering: auto;
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+    }
+}
+
+;
+// 主体
+.bcj-list {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    //加载效果的样式
+    @keyframes show {
+        50% {
+            opacity: .5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    #loading {
+        width: 30%;
+        height: 12px;
+        display: flex;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-around;
+        span.hide {
+            display: none;
+        }
+        span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fc353a;
+        }
+        span:nth-child(1) {
+            animation: show 2s infinite;
+        }
+        span:nth-child(2) {
+            animation: show 2s .5s infinite;
+        }
+        span:nth-child(3) {
+            animation: show 2s 1s infinite;
+        }
+        span:nth-child(4) {
+            animation: show 2s 1.5s infinite;
+        }
+    }
+//商品详情 内容
+     .bcj-footlist{
+         width: 100%;
+         font-size: 14px;
+         ul{
+             width: 100%;
+             li{
+                padding: 10px 5px;
+                width: 100%;
+                height: 150px;
+                margin: 10px 0;
+                border-top: 1px solid #eeeeee;
+                border-bottom: 1px solid #eeeeee;
+                background-color: #FFFFFF;
+                position: relative;
+                 >a{
+                     position:absolute;
+                     top:0;
+                     left: 0;
+                     width: 100%;
+                     height: 150px;
+                     z-index: 1;
+                 }
+                 .wbb-pic{
+
+                         float: left;
+                    img {
+                        width: 130px;
+                        height: 130px;
+                        margin: 0 5px;
+                        }
+                 }
+                 .wbb-inf{
+                   
+                     .wbb-i{
+                         .wbb-t{
+                                min-height: 28px;
+                                max-height: 40px;
+                                line-height: 1.5;
+                                font-weight: 400;
+                                -webkit-line-clamp: 2;
+                                 display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+
+                         }
+                         .wbb-pr{
+                               font-size: 24px;
+                                color: #fc353a;
+                                margin: 5px 0;
+                               i{
+                                font-size: 16px;
+                                font-family: "微软雅黑";
+                               } 
+                             em{
+                                 font-size: 12px;
+                                color: #fc353a;
+                                
+
+                             }
+                             del{
+                                 font-size: 10px;
+                                color: #a8a8a8;
+                                margin-left: 5px;
+
+                             }
+
+                         }
+                     }
+                     .wbb-o{
+                         .bar{
+                             height: 25px;
+                             position: relative;
+                            //  a标签进行遮盖，链接
+                             a{
+                                 position: absolute;
+                                 top:0;
+                                 left: 140px;
+                                 width: 100px;
+                                 height: 50px;
+                                 display: block;
+                              //提高层级
+                                 z-index: 3;
+
+                             }
+                             i{
+                                    position: relative;
+                                    box-sizing: border-box;
+                                    width: 82px;
+                                    height: 14px;
+                                    border: 1px solid #fc353a;
+                                    border-radius: 6px;
+                                    color: #fff;
+                                    font-weight: 900;
+                                    background: #ffb7b7;
+                                    text-align: center;
+                                    overflow: hidden;
+                                    display: inline-block;
+                                 em{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        background: #fc353a;
+                                        display: block;
+                                        transition: all 0.3s cubic-bezier(0.39, 0.58, 0.57, 1);
+                                 }
+                                 span{
+                                     font-size:12px;
+                                     line-height: 11px;
+                                     width: 100%;
+                                     height: 100%;
+                                     display:block;
+                                     position: absolute;
+                                     top:0;
+                                     left: 0;
+                                 }
+                             }
+                             b{
+                             font-size:12px;
+                             font-weight: 400;
+                             margin-left: 10px;
+                             color:#fc353a;
+                             }
+
+                         }
+                         .wbb-b{
+                                
+                             
+                             .wbb-q{
+                                 display: inline-block;
+                                 float: left;
+                                a{
+                                    font-size: 12px;
+                                    height: 26px;
+                                    line-height: 26px;
+                                  display: block;
+                                    color: #fc353a;
+                                    padding:  0 5px;
+                                    border: 1px dotted #fc353a;
+                                    
+                                }
+                             }
+                             .wbb-g{
+                                float: right;
+                                background: #fc353a;
+                                border-radius: 5px;
+                         
+                                
+                                a{
+                                    position:relative;
+                                    font-size:12px;
+                                    display: block;
+                                    width: 100%;
+                                    height: 28px;
+                                    line-height: 28px;
+                                    text-align: center;
+                                    color:white;
+                                    padding: 0 5px;
+                                    z-index: 2;
+                                    
+                                }
+
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+    //下部加载图标
+    .down-loading{
+        text-align: center;
+        span{
+             display: none;
+        }
+        p{
+            display: none;
+            background: #f1f1f1;
+            font-size: 12px;
+            height: 25px;
+
+        }
+        img{
+            width: 30px;
+            height: 30px;
+
+        }
+    }
+
+}
+  //返回顶部
+    .back-top{
+      
+        position:fixed;
+        right:20px;
+        bottom:50px;
+        display:none;
+        z-index:10;
+        a{
+            img{
+            width: 30px;
+            height: 30px;
+            }
+        }
+    }

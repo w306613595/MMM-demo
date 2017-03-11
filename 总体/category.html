@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>category</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet/less" href="./css/base.less"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="./css/common.less"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="css/category.less"/>
+    <!--引用less.js文件-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!--header部分-->
+<header>
+    <a href="#">
+        <h1>慢慢买</h1>
+        <img src="images/header_logo.png" alt=""/>
+    </a>
+    <a href="#">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</header>
+<!--search部分-->
+<section class="search">
+    <form action="#">
+        <input type="button" value="搜索"/>
+        <label for="searchTxt"><input type="text" placeholder="请输入你想比价的商品" id="searchTxt"/></label>
+    </form>
+</section>
+<!--商品分类-->
+<div class="brief">
+    <div class="briefin bornone">
+
+    </div>
+</div>
+<!--加载动画-->
+<p class="animate hide">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</p>
+<!--footer部分-->
+<footer>
+    <div class="footer_header">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a id='return' href="javascript:;">
+            <img src="images/top.jpg" alt="">
+            返回顶部
+        </a>
+    </div>
+    <p>
+        <a href="#">手机app下载 </a>
+        <a href="#">慢慢买手机版 </a>
+        -- 掌上比价平台
+    </p>
+
+    <p>m.manmanbuy.com </p>
+</footer>
+</body>
+<!--商品目录-->
+<script type="text/html" id="menuTpl">
+    {{each result as value i}}
+    <div class="wzg-every" title={{value.titleId}}>
+        <a href="javascript:;">
+            {{value.title}}
+        </a>
+
+        <div class="row"></div>
+    </div>
+    {{/each}}
+</script>
+<!--商品详细分类-->
+<script type="text/html" id="list">
+    {{each result as value i}}
+    <div class="col-xs-4">
+        <a href="productList.html?categoryid={{value.categoryId}}&&cate={{value.category}}"
+           cateoryId={{value.cateoryId}}>{{value.category}}</a>
+    </div>
+    {{/each}}
+</script>
+
+<!--引用jq-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+</html>

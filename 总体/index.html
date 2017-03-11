@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <title>第三组-慢慢买</title>
+    <!--*********************    CSS引入    ************************-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet/less" href="css/base.less" />
+    <link rel="stylesheet/less" href="css/index.less" />
+    <script src="lib/less/less.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type='image/x-icon'/>
+</head>
+
+<body>
+    <!--header部分-->
+    <header>
+        <a href="index.html">
+            <h1>慢慢买</h1>
+            <img src="images/header_logo.png" alt="" />
+        </a>
+        <a href="#">
+            <img src="images/header_app.png" alt="" />
+        </a>
+    </header>
+    <!--search部分-->
+    <section class="search">
+        <form action="#">
+            <input type="button" value="搜索" />
+            <label for="searchTxt"><input type="text" placeholder="请输入你想比价的商品" id="searchTxt"/></label>
+        </form>
+    </section>
+
+    <!--nav部分-->
+    <nav class="nav">
+        <div class="container">
+            <div class="rol">
+                <!--模板-->
+                <script type="text/template" id="navTpl">
+                    {{ each result as v i }}
+                    <div style="{{ i<8 ? '' : 'display:none;' }}" class="col-xs-3">
+                        <a href="{{ i===7? 'javascript:;' : v.titlehref }}">
+                            {{ #v.img }}
+                            <p>{{ v.name }}</p>
+                        </a>
+                    </div>
+                    {{ /each }}
+                </script>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--products 部分-->
+    <section class="products">
+        <div class="pro_header">
+            <h3>
+                超值折扣推荐
+            </h3>
+            <a href="#">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+        <ul>
+            <!--模板-->
+            <script type="text/template" id="proTpl">
+            {{ each result as v i  }}
+                <li>
+                    <a href="details.html?productid={{ i }}" class="fl">
+                        {{ #v.productImgSm }}
+                    </a>
+                    <a href="details.html?productid={{ i }}">
+                        <p>{{ v.productName }}</p>
+                        <p>{{ v.productPinkage }}</p>
+                        <p>{{ v.productFrom }} | {{ v.productTime }} 
+                            <span>{{ getNum(v.productComCount) }}</span>
+                            <img src="lib/font/comments.svg" alt="">
+                        </p>
+                    </a>
+                </li>
+            {{ /each }}
+            
+            
+            
+            </script>
+
+        </ul>
+        <div class="pro_footer">
+            <button>更多优惠信息>></button>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!--rank 部分-->
+    <section class="rank">
+        <h3>品牌排行</h3>
+        <a href="#">
+            <img src="images/header_app.png" alt="" />
+        </a>
+    </section>
+
+    <!--footer部分-->
+    <footer>
+        <div class="footer_header">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a id='return' href="javascript:;">
+                <img src="images/top.jpg" alt="">
+                返回顶部
+            </a>
+        </div>
+        <p>
+            <a href="#">手机app下载 </a>
+            <a href="#">慢慢买手机版 </a>
+             -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com </p>
+    </footer>
+
+    <!--***********************     JS的引入    ******************************-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/template/template.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

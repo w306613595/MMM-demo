@@ -1,0 +1,250 @@
+/*头部区域*/
+
+body {
+  min-width: 320px;
+  background: #ffffff;
+}
+
+#header-zhangfei {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  padding: 10px;
+  background: #ff6c00;
+  .logo {
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    left: 10px;
+    top: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: consola;
+  }
+  h4 {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    line-height: 30px;
+  }
+  .app {
+    img {
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+//详情页部分内容
+
+#content {
+  > .container {
+    > .content-top {
+      > h3 {
+        font: 800 18px/20px "microsoft yahei";
+        color: #5e5e5e;
+      }
+      h4 {
+        color: #ff6c00;
+        font-size: 15px;
+      }
+      .info {
+        color: #999999;
+        font-size: 12px;
+        margin: 12px auto;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .content-bottom {
+      > img {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+      }
+      .intro {
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          color: #606060;
+        }
+        > img {
+          float: right;
+          width: 120px;
+          margin: 10px;
+        }
+      }
+      .content-city {
+        margin: 30px auto;
+        width: 33.33%;
+        ul {
+          margin: 0;
+          a {
+            width: 100%;
+            display: block;
+            border-bottom: 1px dotted #cccccc;
+            line-height: 20px;
+            font-size: 14px;
+            color: #666;
+            span {
+              width: 100%;
+              padding-left: 5px;
+              strong {
+                padding-right: 5px;
+                float: right;
+                color: #ff6c00;
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+
+      > a {
+        height: 40px;
+        color: #ffffff;
+        background-color: #ff6c00;
+        display: block;
+        margin: 20px 10px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 5px;
+      }
+    }
+    .logoin {
+      img {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+    .tile {
+      margin: 6px 8px;
+      font-size: 16px;
+    }
+    .reply {
+      height: 140px;
+      position: relative;
+      padding: 8px 0;
+      textarea {
+        width: 100%;
+        height: 80px;
+        border: 2px solid #ECEAE8;
+        border-bottom: 1px solid #ECEAE8;
+        color: #666;
+        resize: none;
+      }
+      .ctrl {
+        width: 100%;
+        background-color: #fbfbfb;
+        position: absolute;
+        height: 40px;
+        border: 2px solid #ECEAE8;
+        border-top: none;
+        top: 88px;
+        right: 0px;
+        input {
+          color: #ffffff;
+          float: right;
+          border: 0;
+          padding: 10px;
+          margin: 0;
+          background-color: #ff6c00;
+        }
+      }
+    }
+    .list {
+      li {
+        overflow: hidden;
+        margin-bottom: 5px;
+        .userimg {
+          float: left;
+          img {
+            width: 60px;
+            padding: 10px;
+            border-radius: 50%;
+
+          }
+        }
+        .con {
+          overflow: hidden;
+          padding: 10px;
+          .name {
+            .username {
+              float: left;
+              color: #46b8da;
+            }
+            .time {
+              float: right;
+              color: #999999;
+              font-size: 14px;
+            }
+          }
+          .content {
+            margin-top: 5px;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+
+.catalogue {
+  padding-left: 10px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #dddddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 13px;
+  line-height: 36px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+
+}
+
+
+
+/*footer部分*/
+footer {
+  margin:10px 0;
+  background:white;
+  .footer_header {
+    display:flex;
+    >a {
+      flex:1;
+      line-height: 30px;;
+      text-align:center;
+      font-size: 14px;;
+      border:1px solid #ccc;
+      img {
+        width:.16rem;
+      }
+    }
+  }
+  >p {
+    padding:0;
+    text-align:center;
+    height:30px;
+    line-height:20px;
+    font-size: 12px;;
+    padding-top:5px;
+    a:first-child {
+      color:#FF0000;
+    }
+  }
+  >p:first-of-type {
+    margin-top:5px;
+    + p {
+      margin-top:-10px;
+    }
+  }
+}

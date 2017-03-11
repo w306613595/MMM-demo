@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>白菜价</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/common.less">
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet/less" href="css/bcj.less">
+    <link rel="stylesheet" href="./font/font_mvxhangit9gdgqfr/iconfont.css"/>
+    <script src="lib/less/less.min.js"></script>
+
+</head>
+
+<body>
+    <!--//头部-->
+    <div class='wbb-header'>
+        <div class='wbb-back fl'>
+            <a href="index.html"><span class="back_icon"></span></a>
+        </div>
+        <div class='wbb-app fr'>
+            <a href="#"> <img src="./images/header_app.png" alt=""> </a>
+        </div>
+        <h1>白菜价-淘宝内部券</h1>
+
+    </div>
+    <!--//导航-->
+    <div class="wbb-heard-cat ">
+
+        <div class='wbb-nav fl'>
+            <ul class='wbb-nav-list  '>
+
+            </ul>
+        </div>
+        <div class='wbb-search'><i class="ri-search iconfont">&#xe609;</i><span></span></div>
+
+    </div>
+    <div>
+        <!--//搜索框-->
+        <div class="wbb-from hidden">
+            <form action="" method="get" id='wbb-bcj-from'>
+                <div class='wbb-form-text'>
+                    <input type="text" placeholder="搜索产品即可查内部券">
+                    <span></span>
+                </div>
+                <div class='wbb-form-sub'>
+                    <input type="submit" name="" value="搜索" placeholder="">
+                </div>
+            </form>
+        </div>
+        <!--主体-->
+        <div class="bcj-list">
+            <p id="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            <div class="bcj-footlist">
+                <ul>
+                </ul>
+            </div>
+            <div class="down-loading"><span> <em><img src="./images/loading.gif" alt=""></em> </span>
+                <p>着陆咯~~~ O(∩_∩)O </p>
+            </div>
+        </div>
+    </div>
+    <!--返回顶部图标-->
+    <div class="back-top">
+        <a href='javascript:;'><img src="./images/back_top.png" alt=""> </a>
+    </div>
+    <!--footer部分-->
+    <footer>
+        <div class="footer_header">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a id='return' href="javascript:;">
+                <img src="images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <p>
+            <a href="#">手机app下载 </a>
+            <a href="#">慢慢买手机版 </a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com </p>
+    </footer>
+</body>
+<!--nav template模板-->
+<script type='text/template' id='nav'>
+    {{each result as value i}}
+    <li titleId='{{value.titleId}}'><a href="javascript:;">{{value.title}}</a></li>
+    {{/each}}
+</script>
+</ul>
+<!--主体 template模板-->
+<script type='text/template' id='good'>
+    {{each result as value i}}
+    <li>
+        <a class="gobuy" href="#">
+        </a>
+        <div class="wbb-pic"><i></i>{{#value.productImg}}</div>
+        <div class="wbb-inf">
+            <div class="wbb-i">
+                <div class="wbb-t">{{#value.productName}}</div>
+                <div class="wbb-pr">{{#value.productPrice}}
+                </div>
+            </div>
+            <div class="wbb-o">
+                <div class="bar clearfix">
+                    {{#value.productCouponRemain}}</div>
+                <div class="wbb-b clearfix">
+                    <div class="wbb-q">{{#value.productCoupon}}</div>
+                    <div class="wbb-g">{{#value.productHref}}</div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+
+
+
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src='lib/bootstrap/js/bootstrap.min.js'></script>
+<script src='lib/template/template.js'></script>
+<script src='lib/swipe.js'></script>
+
+<script src='js/common.js'></script>
+
+<script src='js/bcj.js'></script>
+
+</html>

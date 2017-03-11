@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱快曝 -- 慢慢卖</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="css/base.less">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="css/guoneizhekou.less">
+    <!--引用less.js-->
+    <script src="lib/less/less.min.js"></script>
+
+
+    <style>
+         .animations {
+             width: 220px;
+             margin: 50% auto;
+         }
+         .animations span {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 5px;
+            border-radius: 50px;
+            font-size: 15px;
+            color: #ff6c00;
+        }
+
+        @keyframes loading {
+            50%{
+                transform:scale(0.2,0.2);
+                opacity: 0.2;
+            }
+            100% {
+                transform:scale(1,1);
+                opacity: 0.8;
+            }
+        }
+
+        .animations span:nth-child(1) {
+            animation: loading 1.2s 0.1s linear infinite;
+        }
+        .animations span:nth-child(2) {
+            animation: loading 1.2s 0.2s linear infinite;
+        }
+        .animations span:nth-child(3) {
+            animation: loading 1.2s 0.3s linear infinite;
+        }
+        .animations span:nth-child(4) {
+            animation: loading 1.2s 0.4s linear infinite;
+        }
+        .animations span:nth-child(5) {
+            animation: loading 1.2s 0.5s linear infinite;
+        }
+        .animations span:nth-child(6) {
+            animation: loading 1.2s 0.6s linear infinite;
+        }
+        .animations span:nth-child(7) {
+            animation: loading 1.2s 0.7s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+<!--头部区域-->
+<header class="clearfix" id="header-zhangfei">
+    <h4>国内折扣</h4>
+    <a href="index.html" class="logo">
+        &lt;
+    </a>
+    <a href="" class="app">
+        <img src="./images/header_app.png" alt="">
+    </a>
+</header>
+<div class="animations clearfix">
+    <span class="animation">L</span>
+    <span class="animation">O</span>
+    <span class="animation">A</span>
+    <span class="animation">D</span>
+    <span class="animation">I</span>
+    <span class="animation">N</span>
+    <span class="animation">G</span>
+</div>
+<!--国内商品区-->
+<section id="menu">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+
+</section>
+
+<nav class="catalogue">
+    首页 &gt; 超值推荐
+</nav>
+
+
+<!--footer部分-->
+<footer>
+    <div class="footer_header">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a id='return' href="javascript:;">
+            <img src="images/top.jpg" alt="">
+            返回顶部
+        </a>
+    </div>
+    <p>
+        <a href="#">手机app下载 </a>
+        <a href="#">慢慢买手机版 </a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com </p>
+</footer>
+</body>
+
+<!--首页菜单的模板-->
+
+
+<script type="text/html" id="zfMenuTpl">
+    {{each result as value i}}
+    <a href="details.html?productid={{value.productId}}" class="col-xs-6">
+        {{#value.productImg}}
+        <div class="title">{{value.productName}}</div>
+        <div class="price">{{value.productPrice}}</div>
+        <div class="info">
+            {{value.productFrom}}<br/>
+            {{value.productTime}}
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+
+
+
+
+
+
+
+<!--引用jq-->
+<script src="lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template.js-->
+<script src="lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="js/guoneizhekou.js"></script>
+<script src="js/common.js"></script>
+
+</html>
